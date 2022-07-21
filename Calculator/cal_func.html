@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        p{
+            font-size: 50px;
+            text-align: center;
+            color: teal;
+        }
+        .outerbox{
+            border-radius: 20px;
+            text-align: center;
+            width: 30%;
+            height: 500px;
+            margin: auto;
+            padding-top: 2%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .screen{
+            width: 80%;
+            height: 80px;
+            margin:20px auto auto auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 20px;
+
+        }
+        .keys{
+            width: 80%;
+            height: 70px;
+            /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+            margin:25px auto;
+            cursor: pointer;
+
+        }
+        .num{
+            width: 23%;
+            height: 70px;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .close{
+            display: flex;
+        }
+        .sym{
+           color:white;
+        }
+        .one{
+            background-color: black;
+        }
+        #alpha{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>Masai Calculator</p>
+    <div class="outerbox">
+        <div class="screen"></div>
+        <div class="keys">
+            <div class="close">
+                <div class="num"><h2>1</h2></div>
+                <div class="num"><h2>2</h2></div>
+                <div class="num"><h2>3</h2></div>
+                <div class="num one" ><h2 class="sym">+</h2></div>
+            </div>
+        </div>
+        <div class="keys">
+            <div class="close">
+                <div class="num"><h2>4</h2></div>
+                <div class="num"><h2>5</h2></div>
+                <div class="num"><h2>6</h2></div>
+                <div class="num one"><h2 class="sym">-</h2></div>
+            </div>
+            
+        </div>
+        <div class="keys">
+            <div class="close">
+                <div class="num"><h2>7</h2></div>
+                <div class="num"><h2>8</h2></div>
+                <div class="num"><h2>9</h2></div>
+                <div class="num one"><h2 class="sym">*</h2></div>
+            </div>
+        </div>
+        <div class="keys">
+            <div class="close">
+                <div class="num" id="alpha"><h2 >C</h2></div>
+                <div class="num"><h2>0</h2></div>
+                <div class="num one"><h2 class="sym">=</h2></div>
+                <div class="num one"><h2 class="sym">/</h2></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    let x=document.querySelectorAll(".num")
+        console.log(x.length)
+    for(let i=0; i<x.length; i++){
+        x[i].addEventListener("click",show)
+    }
+    let bag='';
+    console.log(bag.length)
+    function show(){
+        
+        let num = event.target.innerText
+         
+         if(num=='C'){
+            document.querySelector(".screen").innerText="";
+            bag='';
+        }
+        else if(bag.length == 0 && num == "="){
+                document.querySelector(".screen").innerText="";
+        }
+        else if(num == "="){
+            // document.querySelector(".screen").innerText=eval(bag)
+            let res=eval(bag)
+            document.querySelector(".screen").innerText=res;
+        }
+        
+        else{
+            bag=bag+num;
+            document.querySelector(".screen").innerText=bag;
+        }
+       
+    }
+</script>

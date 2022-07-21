@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web20 C2</title>
+    <style>
+        #top{
+            width:80%;
+            margin: auto;
+        }
+        #top h1{
+            text-align: center;
+        }
+      #top>div{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        gap: 15px;
+      }
+      #top img{
+        width: 100%;
+      }
+      #top h3{
+        text-align: center;
+        line-height: 2px;
+      }
+
+      #mid{
+        width:80%;
+        margin: auto;
+      }
+      #mid>div{
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        gap: 5px;
+      }
+      #mid img{
+        width: 100%;
+      }
+      #bottom{
+        width: 80%;
+        margin: auto;
+      }
+      #bottom>div{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 15px;
+      }
+      #bottom img{
+        width: 100%;
+      }
+      #bottom h1, h2{
+        text-align: center;
+      }
+
+        /* Write all the necessery css here  */
+        /* Medium screens */
+      @media all and (min-width: 401px) and (max-width: 800px) {
+        #top>div{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 15px;
+      }
+      #mid>div{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 5px;
+      }
+      #bottom>div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+      }
+
+      }
+      /* Small screens */
+      @media all and (min-width: 100px) and (max-width: 400px) {
+        #top>div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+      }
+      #mid>div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 5px;
+      }
+      #bottom>div{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 15px;
+      }
+      }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <h1>Choose Your Store</h1>
+        <div>
+            <!-- 6 cards will go inside here  -->
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/3676c7e5-22df-469e-8d05-27a709371317.jpg?tr=w-400,cm-pad_resize" alt="">
+                <h3>Women</h3>
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/3676c7e5-22df-469e-8d05-27a709371317.jpg?tr=w-400,cm-pad_resize" alt="">
+                <h3>Women</h3>
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/3676c7e5-22df-469e-8d05-27a709371317.jpg?tr=w-400,cm-pad_resize" alt="">
+                <h3>Women</h3>
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/3676c7e5-22df-469e-8d05-27a709371317.jpg?tr=w-400,cm-pad_resize" alt="">
+                <h3>Women</h3>
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/3676c7e5-22df-469e-8d05-27a709371317.jpg?tr=w-400,cm-pad_resize" alt="">
+                <h3>Women</h3>
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/3676c7e5-22df-469e-8d05-27a709371317.jpg?tr=w-400,cm-pad_resize" alt="">
+                <h3>Women</h3>
+            </div>
+        </div>
+    </div>
+    <div id="mid">
+        <h1>Hard to Resist Deals</h1>
+        <div>
+            <!-- 8 cards will go inside here  -->
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/233484c0-fc72-4620-b71c-ccffb8c585e8.jpg?tr=w-400,cm-pad_resize" alt="">
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/233484c0-fc72-4620-b71c-ccffb8c585e8.jpg?tr=w-400,cm-pad_resize" alt="">
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/233484c0-fc72-4620-b71c-ccffb8c585e8.jpg?tr=w-400,cm-pad_resize" alt="">
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/233484c0-fc72-4620-b71c-ccffb8c585e8.jpg?tr=w-400,cm-pad_resize" alt="">
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/233484c0-fc72-4620-b71c-ccffb8c585e8.jpg?tr=w-400,cm-pad_resize" alt="">
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/233484c0-fc72-4620-b71c-ccffb8c585e8.jpg?tr=w-400,cm-pad_resize" alt="">
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/233484c0-fc72-4620-b71c-ccffb8c585e8.jpg?tr=w-400,cm-pad_resize" alt="">
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/233484c0-fc72-4620-b71c-ccffb8c585e8.jpg?tr=w-400,cm-pad_resize" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="bottom">
+        <h1>Super Saving Products</h1>
+        <div>
+            <!-- 6 cards will go inside here  -->
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/db4960cc-467f-4e33-bc06-4b0b1c632592.jpg?tr=w-600,cm-pad_resize" alt="">
+                <h2>Min 40% Off</h2>
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/db4960cc-467f-4e33-bc06-4b0b1c632592.jpg?tr=w-600,cm-pad_resize" alt="">
+                <h2>Min 40% Off</h2>
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/db4960cc-467f-4e33-bc06-4b0b1c632592.jpg?tr=w-600,cm-pad_resize" alt="">
+                <h2>Min 40% Off</h2>
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/db4960cc-467f-4e33-bc06-4b0b1c632592.jpg?tr=w-600,cm-pad_resize" alt="">
+                <h2>Min 40% Off</h2>
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/db4960cc-467f-4e33-bc06-4b0b1c632592.jpg?tr=w-600,cm-pad_resize" alt="">
+                <h2>Min 40% Off</h2>
+            </div>
+            <div>
+                <img src="https://images-static.nykaa.com/uploads/db4960cc-467f-4e33-bc06-4b0b1c632592.jpg?tr=w-600,cm-pad_resize" alt="">
+                <h2>Min 40% Off</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

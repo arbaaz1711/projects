@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        div{
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+            width: 40%;
+            margin: auto;
+            margin-top: 10%;
+        }
+        h1{
+            text-align: center;
+            padding-top: 20px;
+            margin-bottom: 10%;
+        }
+        input,label{
+            margin-left: 30px;
+            margin-bottom: 20px;
+            width: 80%;
+            padding: 2%;
+        }
+        input[type='submit']{
+            width: 85%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Sign Up</h1>
+    <form action="" id="form">
+        <label for="">Full Name</label><br/>
+        <input type="text" name="text" id="name" placeholder="Enter your full name"><br/>
+        <label for="">Email</label><br/>
+        <input type="email" id="email" placeholder="Enter Email"><br/>
+        <label for="">Password</label><br/>
+        <input type="password" id="password" placeholder="Enter password"><br/>
+        <input type="submit" value="SIGN UP">
+    </form>
+    </div>
+</body>
+</html>
+
+<script>
+    let form = document.querySelector("form");
+    let dataArr = JSON.parse(localStorage.getItem("login-detail")) || [];
+
+    form.addEventListener("submit",function(){
+        event.preventDefault();
+        let dataObj = {
+            name:form.name.value,
+            email:form.email.value,
+            pass:form.password.value,
+        };
+        dataArr.push(dataObj);
+        localStorage.setItem("login-detail",JSON.stringify(dataArr));
+        console.log(dataArr)
+        
+        window.location.href="middlepage.html";
+    })
+</script>
